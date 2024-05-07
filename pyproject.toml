@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "lib-version"
+version = "v0.1.0"
+description = "A version-aware library that can can be asked for the version of the library."
+authors = ["SagaRut <sagakudungur@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
