@@ -20,7 +20,7 @@ jobs:
           python-version: 3.10
 
       - name: Install & configure Poetry
-        uses: snok/install-poetry@v1.8.2
+        uses: snok/install-poetry@v1.3.3
         with:
           version: 1.5.1
 
