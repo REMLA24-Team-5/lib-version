@@ -1,14 +1,14 @@
-import subprocess
+import toml
 
 class VersionUtil:
     @staticmethod
     def get_version():
         try:
-            # Run git describe with subprocess to get the latest tag
-            git_version = subprocess.check_output(['git', 'describe', '--tags']).strip().decode('utf-8')
-            # Format the output to only return the tag part
-            version = git_version.split('-')[0]
-        except Exception:
+            # Read version from pyproject.toml
+            with open('pyproject.toml', 'r') as file:
+                pyproject_toml = toml.load(file)
+                version = pyproject_toml['tool']['poetry']['version']
+        except (FileNotFoundError, KeyError):
             version = 'unknown'
         return version
 
