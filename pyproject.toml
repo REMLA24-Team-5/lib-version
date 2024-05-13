@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lib-version"
-version = "v0.1.4"
+version = "v0.1.5"
 description = "A version-aware library that can can be asked for the version of the library."
 authors = ["SagaRut <sagakudungur@gmail.com>"]
 readme = "README.md"
