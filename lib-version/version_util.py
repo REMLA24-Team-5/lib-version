@@ -5,7 +5,7 @@ class VersionUtil:
     def get_version():
         try:
             # Read version from pyproject.toml
-            with open('pyproject.toml', 'r') as file:
+            with open('../pyproject.toml', 'r') as file:
                 pyproject_toml = toml.load(file)
                 version = pyproject_toml['tool']['poetry']['version']
         except (FileNotFoundError, KeyError):
