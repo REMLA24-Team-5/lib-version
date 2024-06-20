@@ -1,15 +1,13 @@
-import toml
+from importlib.metadata import version, PackageNotFoundError
 
 class VersionUtil:
     @staticmethod
     def get_version():
+        package_name = "lib-version"
         try:
-            # Read version from pyproject.toml
-            with open('../pyproject.toml', 'r') as file:
-                pyproject_toml = toml.load(file)
-                version = pyproject_toml['tool']['poetry']['version']
-        except (FileNotFoundError, KeyError):
-            version = 'unknown'
+            return version(package_name)
+        except PackageNotFoundError:
+            return "Package not found"
         return version
 
 # Example usage
