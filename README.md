@@ -3,5 +3,5 @@ A version-aware library that can can be asked for the version of the library. Th
 
 Include the following in a requirement.txt for example to install the package:
 ```
-lib-version @ git+https://github.com/REMLA24-Team-5/lib-version@v0.1.4
+lib-version @ git+https://github.com/REMLA24-Team-5/lib-version@v0.1.7
 ```
